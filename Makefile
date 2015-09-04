@@ -18,6 +18,13 @@ help:
 	@printf "\n"
 
 
-## install develop
-develop:
+## apaga os arquivos .pyc
+clean:
+	@echo "Cleaning up build, *.pyc files..."
+	@find . -name '*.pyc' -delete
+	@rm -rf build
+
+
+## setup install
+install: clean
 	@python setup.py install

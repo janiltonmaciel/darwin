@@ -14,9 +14,8 @@ setup(
     packages=find_packages(),
     license='GPL',
     description='Uma coleção de funcionalidades para deploy via fabric',
-    install_requires=['passlib', 'cryptography'],
+    install_requires=['passlib>=1.6.2', 'cryptography>=0.9.1'],
     include_package_data=True,
-    test_suite='werkzeug.testsuite.suite',
     zip_safe=False,
     platforms='any'
 )
