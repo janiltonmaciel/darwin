@@ -7,7 +7,7 @@ except ImportError:
 
 setup(
     name='darwin',
-    version='0.1',
+    version='1.0.3',
     url='https://github.com/janiltonmaciel/darwin',
     author='Janilton Maciel',
     author_email='janilton@gmail.com',
