@@ -12,7 +12,7 @@ class SecurityToken(object):
 
     @classmethod
     def config(cls, password_secret_key):
-        _fernet = Fernet(password_secret_key)
+        cls._fernet = Fernet(password_secret_key)
 
     @classmethod
     def encrypt(cls, key):
