@@ -17,12 +17,12 @@ class SecurityToken(object):
     @classmethod
     def encrypt(cls, key):
         key = unicode_dados(key)
-        return cls._fernet().encrypt(key)
+        return cls.fernet().encrypt(key)
 
     @classmethod
     def decrypt(cls, token, ttl=None):
         token = unicode_dados(token)
-        return cls._fernet().decrypt(token, ttl)
+        return cls.fernet().decrypt(token, ttl)
 
     @classmethod
     def verify(cls, token, key, ttl=None):
@@ -30,7 +30,7 @@ class SecurityToken(object):
         return cls.decrypt(token, ttl) == key
 
     @classmethod
-    def _fernet(cls):
+    def fernet(cls):
         if cls._fernet is None:
             return ValueError("Configure o password secret key")
         return cls._fernet
